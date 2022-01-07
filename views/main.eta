@@ -1,0 +1,13 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Questions application</h1>
+
+<h4>This is an application where you can add questions and answer questions made by others.</h4>
+<p>If you haven't used this application before you need to start by <a href="/auth/register">registering.</a></p>
+
+<p> If you have already registered just <a href="/auth/login">log in.</a></p>
+<br>
+<p>Made for <a href="https://wsd.cs.aalto.fi/">Web Software Development Course</a> offered by <a href="https://www.aalto.fi/en">Aalto university</a></p>
+
+
+

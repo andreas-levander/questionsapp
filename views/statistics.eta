@@ -1,0 +1,26 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Statistics!</h1>
+
+<h3>Number of answered questions: <%= it.questions_answered%></h3>
+
+<h3>Number of correctly answered questions: <%= it.questions_correct%></h3>
+
+<h3>Number of answers to your questions: <%= it.answers%></h3>
+
+<table>
+<thead>
+ <tr>
+    <th>Email</th>
+    <th>Questions answered</th>
+ </tr>
+</thead>
+<tbody>
+<% it.toplist.forEach(person => { %>
+    <tr>
+    <td><%= person.email %></td>
+    <td><%= person.count %></td>
+    </tr>
+<% }); %>
+</tbody>
+</table>

@@ -1,0 +1,30 @@
+<% layout('./layouts/layout.eta') %>
+
+<h2>Your questions</h2>
+
+<% if (it.questions && it.questions.length > 0) { %>
+
+<ul>
+<% it.questions.forEach(question => { %>
+  <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
+<% }); %>
+</ul>
+
+<% } else { %>
+
+<p>None available.</p>
+
+<% } %>
+
+
+<h2>Add a question!</h2>
+
+<form method="POST" action="/questions">
+<%~ includeFile('./partials/error.eta', { errors: it.validationErrors, attribute: "title"}) %>
+Question title:<br/>
+<input type="text" name="title" value="<%= it.title %>" /><br/>
+<%~ includeFile('./partials/error.eta', { errors: it.validationErrors, attribute: "question_text"}) %>
+Question text:<br/>
+<textarea name="question_text"><%= it.question_text %></textarea><br/>
+<input type="submit" value="Add"/>
+</form>
