@@ -1,21 +1,22 @@
-Questions application
+#Questions application
 
+##What it is:
 This is an application built using deno where you can add questions and take a quiz containing random questions from all questions in the database.
 
 Web page: https://aaltowebcourse2.herokuapp.com/
 
-How to run locally:
+##How to run locally:
 1. add database credentials to "database/database.js" connection pool
 2. add the database tables to your database
 3. run command "deno run --allow-all --unstable run-locally.js"
 4. go to "localhost:7777" in your browser to see the application
 
-To have tests working as they should you need to:
+##To have tests working as they should you need to:
 1. have database with table
 2. added a question and options
 3. answered a question
 
-Database Tables:
+##Database Tables:
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
