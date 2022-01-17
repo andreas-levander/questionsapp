@@ -1,6 +1,6 @@
 # Questions application
 
-##What it is:
+## What it is:
 This is an application built using deno where you can add questions and take a quiz containing random questions from all questions in the database.
 
 Web page: https://aaltowebcourse2.herokuapp.com/
